@@ -22,7 +22,14 @@ shinyUI(fluidPage(
     ),
     
      mainPanel(
-       plotOutput("starPlot", width = "800px", height = "800px")
+         tabsetPanel(
+            tabPanel("Drawing",
+                plotOutput("starPlot", width = "800px", height = "800px")
+            ),
+            tabPanel("Code",
+                HTML("<p>Go to <a></a>")
+            )
+         )
     )
   )
 ))
